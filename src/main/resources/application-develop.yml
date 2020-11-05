@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    include: db-settings
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
