@@ -4,8 +4,9 @@ import javax.persistence.Entity
 
 
 @Entity
-class GameParameters(
-        var gameParameters: String? = null
+class Request(
+        var a: String? = null,
+        var b: Long? = null,
+        var ls: Long? = null
         ) {
-
 }
