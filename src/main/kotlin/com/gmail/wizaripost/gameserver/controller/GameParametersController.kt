@@ -28,5 +28,6 @@ class GameParametersController {
     fun getParams1(): GameParameters {
         println("getParams(controller")
         return GameParameters("getParams1")
+
     }
 }
