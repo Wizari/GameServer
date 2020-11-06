@@ -11,25 +11,22 @@ import org.springframework.web.bind.annotation.*
 @RestController
 @RequestMapping("api/employees")
 class GameParametersController {
-    //    private val service: GameParametersService = new GameParametersService
     val service: IGameParametersService = GameParametersService()
 
-//, produces = [MediaType.TEXT_PLAIN_VALUE]
-//    value = ["/{id}"],
-//    , method = [RequestMethod.GET]
-    //    produces = [MediaType.APPLICATION_JSON_VALUE] produces = [MediaType.TEXT_HTML_VALUE]
 
-
-    @RequestMapping(method = [RequestMethod.GET], produces = [MediaType.TEXT_PLAIN_VALUE])
-    fun getParams(@RequestBody request: Request): GameParameters {
-        println("getParams(controller")
-        return this.service.getParams(request)
-    }
-
-//    //    @GetMapping
-//    @GetMapping("/greeting")
+//    @RequestMapping(method = [RequestMethod.GET], produces = [MediaType.TEXT_PLAIN_VALUE])
+//@RequestMapping(method = [RequestMethod.GET], consumes= ["text/plain"])
+    @RequestMapping(method = [RequestMethod.GET])
 //    fun getParams(@RequestBody request: Request): GameParameters {
-//        println("getParams(controller")
-//        return this.service.getParams(request)
-//    }
+    fun getParams(@RequestBody request: String): GameParameters {
+        return service.getParams(request)
+}
+
+
+    @GetMapping("/greeting")
+//    fun getParams(@RequestBody request: Request): GameParameters {
+    fun getParams1(): GameParameters {
+        println("getParams(controller")
+        return GameParameters("getParams1")
+    }
 }
