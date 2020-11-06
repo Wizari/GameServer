@@ -6,6 +6,7 @@ import com.gmail.wizaripost.gameserver.entity.Request
 
 interface IGameParametersService {
 
+//    fun getParams(request: Request?): GameParameters
     fun getParams(stringRequest: String): GameParameters
 
 }
