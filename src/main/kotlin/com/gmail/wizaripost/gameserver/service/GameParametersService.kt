@@ -9,8 +9,15 @@ import org.springframework.stereotype.Service
 @Service
 class GameParametersService : IGameParametersService {
 
+//    override fun getParams(request: Request): GameParameters {
+//        println("test getParams")
+//        return GameParameters("111111getParams_GameParameters")
+//    }
+
     override fun getParams(request: Request): GameParameters {
         println("test getParams")
-        return GameParameters("111111getParams_GameParameters")
+        val gameParameters: GameParameters = GameParameters("123123")
+
+        return gameParameters
     }
 }
